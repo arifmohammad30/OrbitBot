@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MOSDAC AI Help Bot Design System - Space & Satellite Themed */
+
+@layer base {
+  :root {
+    /* Cosmic Background Colors */
+    --background: 240 16% 6%;
+    --foreground: 240 5% 96%;
+
+    /* Cosmic Card System */
+    --card: 240 15% 8%;
+    --card-foreground: 240 5% 96%;
+
+    /* Popover & Modal Colors */
+    --popover: 240 15% 8%;
+    --popover-foreground: 240 5% 96%;
+
+    /* Primary - Deep Space Purple */
+    --primary: 260 70% 55%;
+    --primary-foreground: 240 5% 96%;
+    --primary-glow: 260 70% 65%;
+
+    /* Secondary - Cosmic Blue */
+    --secondary: 220 70% 50%;
+    --secondary-foreground: 240 5% 96%;
+
+    /* Muted - Space Gray */
+    --muted: 240 8% 15%;
+    --muted-foreground: 240 5% 70%;
+
+    /* Accent - Stellar Blue */
+    --accent: 200 80% 60%;
+    --accent-foreground: 240 15% 8%;
+
+    /* Bot Colors */
+    --bot-message: 260 60% 20%;
+    --bot-message-foreground: 240 5% 96%;
+
+    /* User Colors */
+    --user-message: 220 60% 25%;
+    --user-message-foreground: 240 5% 96%;
+
+    /* System Colors */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 240 5% 96%;
+
+    /* Border & Input */
+    --border: 240 15% 18%;
+    --input: 240 15% 12%;
+    --ring: 260 70% 55%;
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(260 70% 55%), hsl(220 70% 50%));
+    --gradient-nebula: linear-gradient(180deg, hsl(240 16% 6%), hsl(260 30% 8%));
+    --gradient-message: linear-gradient(135deg, hsl(260 60% 20%), hsl(260 50% 25%));
+    --gradient-user: linear-gradient(135deg, hsl(220 60% 25%), hsl(200 50% 30%));
+
+    /* Shadows & Effects */
+    --shadow-cosmic: 0 10px 30px -10px hsl(260 70% 55% / 0.3);
+    --shadow-glow: 0 0 20px hsl(260 70% 65% / 0.4);
+    --shadow-message: 0 4px 12px hsl(240 15% 8% / 0.6);
+
+    /* Animation Durations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: var(--gradient-nebula);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Cosmic Message Bubbles */
+  .message-bot {
+    @apply rounded-2xl rounded-bl-md p-4 max-w-[80%] shadow-[var(--shadow-message)];
+    background: var(--gradient-message);
+    color: hsl(var(--bot-message-foreground));
+    animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .message-user {
+    @apply rounded-2xl rounded-br-md p-4 max-w-[80%] shadow-[var(--shadow-message)] ml-auto;
+    background: var(--gradient-user);
+    color: hsl(var(--user-message-foreground));
+    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Typing Indicator Animation */
+  .typing-dots {
+    @apply flex space-x-1;
+  }
+
+  .typing-dot {
+    @apply w-2 h-2 rounded-full bg-primary opacity-60;
+    animation: typingDot 1.5s infinite;
+  }
+
+  .typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  /* Quick Action Buttons */
+  .quick-action {
+    @apply px-4 py-2 rounded-full text-sm border border-border/50 hover:border-primary/50 
+           bg-card/50 hover:bg-primary/10 text-foreground hover:text-primary
+           transition-all duration-300 hover:shadow-[var(--shadow-glow)] hover:scale-105;
+  }
+
+  /* Chat Input Styling */
+  .chat-input {
+    @apply w-full bg-input border border-border rounded-2xl px-4 py-3 
+           text-foreground placeholder:text-muted-foreground
+           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+           resize-none max-h-32 min-h-[3rem];
+    transition: var(--transition-smooth);
+  }
+
+  /* Send Button */
+  .send-button {
+    @apply p-3 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground
+           transition-all duration-300 hover:shadow-[var(--shadow-glow)] hover:scale-105
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  /* Cosmic Header */
+  .cosmic-header {
+    @apply relative overflow-hidden;
+    background: var(--gradient-cosmic);
+    box-shadow: var(--shadow-cosmic);
+  }
+
+  .cosmic-header::before {
+    content: '';
+    @apply absolute inset-0 opacity-20;
+    background: radial-gradient(circle at 30% 20%, hsl(260 70% 65% / 0.3), transparent 50%),
+                radial-gradient(circle at 80% 80%, hsl(220 70% 60% / 0.3), transparent 50%);
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes typingDot {
+    0%, 60%, 100% {
+      transform: translateY(0);
+      opacity: 0.4;
+    }
+    30% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Utility Classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.4s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
