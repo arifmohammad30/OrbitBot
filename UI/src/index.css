@@ -131,6 +131,7 @@
   }
 
   body {
+    margin: 0;
     @apply bg-background text-foreground font-inter;
     background: var(--gradient-nebula);
     min-height: 100vh;
@@ -264,6 +265,22 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes avatar-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .avatar-float {
+    animation: avatar-float 2s ease-in-out infinite;
+  }
+
+  @keyframes avatar-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+  .avatar-bounce {
+    animation: avatar-bounce 2s ease-in-out infinite;
   }
 
   /* Utility Classes */

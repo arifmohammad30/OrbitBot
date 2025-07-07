@@ -61,7 +61,7 @@ const Message: React.FC<MessageProps> = ({ message }) => {
         </div>
         
         {/* Message Content */}
-        <div className={`${isBot ? 'message-bot' : 'message-user'} relative`}>
+        <div className={`${isBot ? 'message-bot' : 'message-user'} relative inline-block min-w-[64px]`}>
           {/* Attached Files */}
           {message.files && message.files.length > 0 && (
             <div className="mb-3 space-y-2">

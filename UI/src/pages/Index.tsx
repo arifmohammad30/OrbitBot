@@ -172,7 +172,7 @@ const Index = () => {
       />
 
       {/* Main Chat Area */}
-      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full">
+      <main className="flex-1 flex flex-col w-full max-w-4xl mx-auto sm:rounded-xl sm:shadow-lg sm:my-4 bg-background/80">
         <ChatWindow messages={messages} isTyping={isTyping} />
         
         {/* Quick Actions - Only show when no messages */}

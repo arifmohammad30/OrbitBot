@@ -9,7 +9,7 @@ const TypingIndicator: React.FC = () => {
           <img 
             src={botAvatar} 
             alt="OrbitBot" 
-            className="w-6 h-6 rounded-full border border-primary/30"
+            className="w-6 h-6 rounded-full border border-primary/30 avatar-bounce"
           />
           <span className="text-xs text-muted-foreground font-medium">OrbitBot</span>
         </div>

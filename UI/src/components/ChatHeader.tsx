@@ -23,16 +23,16 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
   const [showSettings, setShowSettings] = useState(false);
 
   return (
-    <header className="cosmic-header relative z-10">
-      <div className="relative z-10 px-4 py-3">
+    <header className="cosmic-header relative z-10 w-full">
+      <div className="relative z-10 py-3 w-full">
         <div className="flex items-center justify-between">
           {/* Bot Info Section */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 ml-3">
             <div className="relative">
               <img 
                 src={botAvatar} 
                 alt="OrbitBot" 
-                className="w-10 h-10 rounded-full border-2 border-primary-foreground/20"
+                className="w-10 h-10 rounded-full border-2 border-primary-foreground/20 avatar-float"
               />
               <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-primary-foreground/20 ${
                 isOnline ? 'bg-green-500' : 'bg-red-500'
