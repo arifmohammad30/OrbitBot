@@ -50,7 +50,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Welcome to MOSDAC AI Help Bot
+                Welcome to OrbitBot AI Assistant
               </h3>
               <p className="text-muted-foreground max-w-md">
                 I'm here to help you with ISRO satellite data information, weather monitoring, and more. 

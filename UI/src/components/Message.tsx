@@ -1,5 +1,5 @@
 import React from 'react';
-import botAvatar from '@/assets/bot-avatar.png';
+import botAvatar from '@/assets/bot-avatar.jpg';
 import userAvatar from '@/assets/user-avatar.png';
 
 interface AttachedFile {
@@ -42,10 +42,10 @@ const Message: React.FC<MessageProps> = ({ message }) => {
             <>
               <img 
                 src={botAvatar} 
-                alt="MOSDAC AI Bot" 
+                alt="OrbitBot" 
                 className="w-6 h-6 rounded-full border border-primary/30"
               />
-              <span className="text-xs text-muted-foreground font-medium">MOSDAC AI</span>
+              <span className="text-xs text-muted-foreground font-medium">OrbitBot</span>
             </>
           )}
           {!isBot && (

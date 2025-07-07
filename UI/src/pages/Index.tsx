@@ -24,7 +24,7 @@ interface MessageData {
 const Index = () => {
   const [messages, setMessages] = useState<MessageData[]>([]);
   const [isTyping, setIsTyping] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
   const { toast } = useToast();
 
@@ -87,7 +87,7 @@ const Index = () => {
     setIsDarkMode(prev => !prev);
     document.documentElement.classList.toggle('dark');
     toast({
-      title: `Switched to ${isDarkMode ? 'Light' : 'Dark'} Mode`,
+      title: `Switched to ${!isDarkMode ? 'Dark' : 'Light'} Mode`,
       duration: 2000,
     });
   }, [isDarkMode, toast]);

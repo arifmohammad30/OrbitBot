@@ -3,7 +3,7 @@ import { Download, Settings, Moon, Sun, Wifi, WifiOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
-import botAvatar from '@/assets/bot-avatar.png';
+import botAvatar from '@/assets/bot-avatar.jpg';
 
 interface ChatHeaderProps {
   onExport: () => void;
@@ -31,7 +31,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
             <div className="relative">
               <img 
                 src={botAvatar} 
-                alt="MOSDAC AI Bot" 
+                alt="OrbitBot" 
                 className="w-10 h-10 rounded-full border-2 border-primary-foreground/20"
               />
               <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-primary-foreground/20 ${
@@ -45,7 +45,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
               </div>
             </div>
             <div>
-              <h1 className="text-lg font-bold text-primary-foreground">MOSDAC AI Help Bot</h1>
+              <h1 className="text-lg font-bold text-primary-foreground">OrbitBot AI Assistant</h1>
               <div className="flex items-center space-x-2 text-xs text-primary-foreground/80">
                 <span className={`w-2 h-2 rounded-full ${isOnline ? 'bg-green-500' : 'bg-red-500'}`}></span>
                 <span>{isOnline ? 'Online' : 'Offline'}</span>

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Paperclip } from 'lucide-react';
 import EmojiPicker from './EmojiPicker';
-import FileAttachment from './FileAttachment';
 
 interface AttachedFile {
   id: string;
@@ -20,6 +19,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, disabled = f
   const [message, setMessage] = useState('');
   const [attachedFiles, setAttachedFiles] = useState<AttachedFile[]>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,8 +51,16 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, disabled = f
     }
   };
 
-  const handleFilesAttached = (files: AttachedFile[]) => {
-    setAttachedFiles(files);
+  const handleFilesAttached = (files: FileList | null) => {
+    if (!files) return;
+    const newFiles: AttachedFile[] = Array.from(files).map(file => ({
+      id: `${Date.now()}-${Math.random()}`,
+      name: file.name,
+      size: file.size,
+      type: file.type,
+      preview: file.type.startsWith('image/') ? URL.createObjectURL(file) : undefined
+    }));
+    setAttachedFiles(prev => [...prev, ...newFiles]);
   };
 
   const handleRemoveFile = (fileId: string) => {
@@ -75,18 +83,27 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, disabled = f
   }, [message]);
 
   return (
-    <div className="bg-card/30 backdrop-blur-sm border-t border-border/50">
-      {/* File Attachments */}
-      <div className="px-4 pt-3">
-        <FileAttachment
-          onFilesAttached={handleFilesAttached}
-          attachedFiles={attachedFiles}
-          onRemoveFile={handleRemoveFile}
-        />
-      </div>
-
-      {/* Message Input */}
+    <div className="">
       <form onSubmit={handleSubmit} className="flex items-end space-x-2 p-4">
+        {/* Paperclip icon and hidden file input */}
+        <div className="flex flex-col justify-end">
+          <button
+            type="button"
+            className="p-2 text-muted-foreground hover:text-foreground"
+            onClick={() => fileInputRef.current?.click()}
+            aria-label="Attach file"
+          >
+            <Paperclip size={20} />
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            multiple
+            accept="image/*,video/*,.pdf,.doc,.docx,.txt"
+            style={{ display: 'none' }}
+            onChange={e => handleFilesAttached(e.target.files)}
+          />
+        </div>
         <div className="flex-1 relative">
           <textarea
             ref={textareaRef}
@@ -102,7 +119,6 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, disabled = f
             <EmojiPicker onEmojiSelect={handleEmojiSelect} />
           </div>
         </div>
-
         <button
           type="submit"
           disabled={(!message.trim() && attachedFiles.length === 0) || disabled}
@@ -112,6 +128,17 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, disabled = f
           <Send size={20} />
         </button>
       </form>
+      {/* Show attached files as small chips below input */}
+      {attachedFiles.length > 0 && (
+        <div className="flex flex-wrap gap-2 px-4 pb-2">
+          {attachedFiles.map(file => (
+            <div key={file.id} className="flex items-center space-x-2 bg-muted/30 rounded-lg px-3 py-1 text-xs">
+              <span className="truncate max-w-[100px] font-medium">{file.name}</span>
+              <button type="button" onClick={() => handleRemoveFile(file.id)} className="text-destructive hover:underline">✕</button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

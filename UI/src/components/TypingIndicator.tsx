@@ -1,5 +1,5 @@
 import React from 'react';
-import botAvatar from '@/assets/bot-avatar.png';
+import botAvatar from '@/assets/bot-avatar.jpg';
 
 const TypingIndicator: React.FC = () => {
   return (
@@ -8,10 +8,10 @@ const TypingIndicator: React.FC = () => {
         <div className="flex items-center space-x-2 mb-1 ml-1">
           <img 
             src={botAvatar} 
-            alt="MOSDAC AI Bot" 
+            alt="OrbitBot" 
             className="w-6 h-6 rounded-full border border-primary/30"
           />
-          <span className="text-xs text-muted-foreground font-medium">MOSDAC AI</span>
+          <span className="text-xs text-muted-foreground font-medium">OrbitBot</span>
         </div>
         
         <div className="message-bot flex items-center space-x-2">
