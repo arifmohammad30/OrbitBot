@@ -141,17 +141,49 @@ const Index = () => {
     setMessages(prev => [...prev, userMessage]);
     setIsTyping(true);
 
-    // Simulate API delay
-    setTimeout(() => {
-      const responseText = generateResponse(messageText);
+    // If files are attached, show a placeholder message and do not send to backend
+    if (files && files.length > 0) {
       const botResponse: MessageData = {
         id: (Date.now() + 1).toString(),
-        text: responseText,
+        text: "File upload functionality will be integrated in the future. For now, file sharing is not supported.",
+        sender: 'bot',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, botResponse]);
+      setIsTyping(false);
+      return;
+    }
+
+    try {
+      // Send the question to the backend
+      const response = await fetch("http://localhost:8000/query-fusion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: messageText })
+      });
+
+      if (!response.ok) throw new Error("API error");
+
+      const data = await response.json();
+      const botResponse: MessageData = {
+        id: (Date.now() + 2).toString(),
+        text: data.answer,
         sender: 'bot',
         timestamp: new Date()
       };
 
       setMessages(prev => [...prev, botResponse]);
+    } catch (error) {
+      setMessages(prev => [
+        ...prev,
+        {
+          id: (Date.now() + 2).toString(),
+          text: "Sorry, I couldn't get an answer from the server.",
+          sender: 'bot',
+          timestamp: new Date()
+        }
+      ]);
+    } finally {
       setIsTyping(false);
     }, 1500 + Math.random() * 1000); // Random delay between 1.5-2.5 seconds
   }, [generateResponse]);

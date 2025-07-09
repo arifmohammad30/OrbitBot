@@ -7,12 +7,16 @@ import botAvatar from '@/assets/bot-avatar.jpg';
 
 interface ChatHeaderProps {
   onExport: () => void;
+  onToggleTheme: () => void; // ✅ Added
+  isDarkMode: boolean;       // ✅ Added
   isOnline: boolean;
   messagesCount: number;
 }
 
 const ChatHeader: React.FC<ChatHeaderProps> = ({ 
   onExport, 
+  onToggleTheme, 
+  isDarkMode, 
   isOnline, 
   messagesCount 
 }) => {
@@ -71,6 +75,16 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
               <Download className="w-5 h-5" />
             </Button>
 
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onToggleTheme}
+              className="text-primary-foreground hover:bg-primary-foreground/10"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </Button>
+
             <Popover open={showSettings} onOpenChange={setShowSettings}>
               <PopoverTrigger asChild>
                 <Button
@@ -89,6 +103,19 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
                     <Button variant="ghost" size="sm" onClick={onExport} className="justify-start">
                       <Download className="w-4 h-4 mr-2" />
                       Export Chat
+                    </Button>
+                    <Button variant="ghost" size="sm" onClick={onToggleTheme} className="justify-start">
+                      {isDarkMode ? (
+                        <>
+                          <Sun className="w-4 h-4 mr-2" />
+                          Light Mode
+                        </>
+                      ) : (
+                        <>
+                          <Moon className="w-4 h-4 mr-2" />
+                          Dark Mode
+                        </>
+                      )}
                     </Button>
                   </div>
                 </div>
