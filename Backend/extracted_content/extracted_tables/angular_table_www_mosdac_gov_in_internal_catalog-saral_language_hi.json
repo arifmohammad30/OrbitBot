@@ -1,0 +1,122 @@
+[
+  {
+    "Sr_No": "1",
+    "Product_Name": "SRLGPN",
+    "Product_Description": "Fully validated offline Native product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "35 DAYS-CYCLE",
+    "Start_Date": "2013-05-23",
+    "End_Date": "2019-10-07",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/SRLGPN",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLGPN"
+  },
+  {
+    "Sr_No": "2",
+    "Product_Name": "SRLGPN_F",
+    "Product_Description": "Fully validated offline Native product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "35 DAYS-CYCLE",
+    "Start_Date": "2019-06-24",
+    "End_Date": "2024-03-04",
+    "Processing_Status": "Active",
+    "DOI": "10.19038/SAC/10/SRLGPN",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLGPN"
+  },
+  {
+    "Sr_No": "3",
+    "Product_Name": "SRLGPR",
+    "Product_Description": "Fully validated offline Reduced product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "35 DAYS-CYCLE",
+    "Start_Date": "2013-05-23",
+    "End_Date": "2018-10-22",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/SRLGPR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLGPR"
+  },
+  {
+    "Sr_No": "4",
+    "Product_Name": "SRLGPR_F",
+    "Product_Description": "Fully validated offline Reduced product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "35 DAYS-CYCLE",
+    "Start_Date": "2018-08-13",
+    "End_Date": "2024-04-08",
+    "Processing_Status": "Active",
+    "DOI": "10.19038/SAC/10/SRLGPR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLGPR"
+  },
+  {
+    "Sr_No": "5",
+    "Product_Name": "SRLGPS",
+    "Product_Description": "Fully validated offline Sensor product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "35 DAYS-CYCLE",
+    "Start_Date": "2013-05-23",
+    "End_Date": "2019-06-24",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/SRLGPS",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLGPS"
+  },
+  {
+    "Sr_No": "6",
+    "Product_Name": "SRLGPS_F",
+    "Product_Description": "Fully validated offline Sensor product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "35 DAYS-CYCLE",
+    "Start_Date": "2013-03-14",
+    "End_Date": "2024-03-04",
+    "Processing_Status": "Active",
+    "DOI": "10.19038/SAC/10/SRLGPS",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLGPS"
+  },
+  {
+    "Sr_No": "7",
+    "Product_Name": "SRLIPN",
+    "Product_Description": "Interim Geo physical data record, Native product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "3 DAYS",
+    "Start_Date": "2013-03-12",
+    "End_Date": "2020-03-07",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/SRLIPN",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLIPN"
+  },
+  {
+    "Sr_No": "8",
+    "Product_Name": "SRLIPN_F",
+    "Product_Description": "Interim Geo physical data record, Native product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "3 DAYS",
+    "Start_Date": "2020-02-08",
+    "End_Date": "2025-07-05",
+    "Processing_Status": "Active",
+    "DOI": "10.19038/SAC/10/SRLIPN",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLIPN"
+  },
+  {
+    "Sr_No": "9",
+    "Product_Name": "SRLIPR",
+    "Product_Description": "Interim Geo physical data record, Reduced product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "3 DAYS",
+    "Start_Date": "2013-03-12",
+    "End_Date": "2020-03-06",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/SRLIPR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLIPR"
+  },
+  {
+    "Sr_No": "10",
+    "Product_Name": "SRLIPR_F",
+    "Product_Description": "Interim Geo physical data record, Reduced product",
+    "Processing_Level": "L2",
+    "Temporal_Resolution": "3 DAYS",
+    "Start_Date": "2020-02-06",
+    "End_Date": "2025-07-05",
+    "Processing_Status": "Active",
+    "DOI": "10.19038/SAC/10/SRLIPR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/SRLIPR"
+  }
+]

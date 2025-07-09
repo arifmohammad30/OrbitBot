@@ -1,0 +1,20 @@
+[
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/lightning",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/common_forecast/assets/img/transparent_mosdac_rapid.png",
+    "context_snippet": "![](https://mosdac.gov.in/common_forecast/assets/img/transparent_mosdac_rapid.png) Lightning Lightning Forecast 7-JUL-2025 21:0:0 LOC | 7-JUL-2025 3:0:0 10-JUL-2025 0:0:0 7-JUL-2025 21:0:0 | ---|---|--- ![](https://mosdac.gov...."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/lightning",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/geoserver_2/weather_forecast/wms?TRANSPARENT=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic&LAYER=weather_forecast:GEO_LPI_21&FORMAT=image/png&STYLES=",
+    "context_snippet": "...rent_mosdac_rapid.png) Lightning Lightning Forecast 7-JUL-2025 21:0:0 LOC | 7-JUL-2025 3:0:0 10-JUL-2025 0:0:0 7-JUL-2025 21:0:0 | ---|---|--- ![](https://mosdac.gov.in/geoserver_2/weather_forecast/wms?TRANSPARENT=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic&LAYER=weather_forecast:GEO_LPI_21&FORMAT=image/png&STYLES=) --- Legends --- [](https://mosdac.gov.in/lightning/) +\u2212 \u21e7 i \u2922 500 km"
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/lightning",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/lightning/",
+    "context_snippet": "...ANSPARENT=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic&LAYER=weather_forecast:GEO_LPI_21&FORMAT=image/png&STYLES=) --- Legends --- [](https://mosdac.gov.in/lightning/) +\u2212 \u21e7 i \u2922 500 km"
+  }
+]

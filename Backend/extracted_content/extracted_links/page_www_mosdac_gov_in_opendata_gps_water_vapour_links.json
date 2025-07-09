@@ -1,0 +1,32 @@
+[
+  {
+    "source_page": "https://www.mosdac.gov.in/opendata/gps_water_vapour",
+    "link_text": "Home (\u092e\u0941\u0916 \u092a\u0943\u0937\u094d\u0920)",
+    "target_url": "https://mosdac.gov.in",
+    "context_snippet": "[Home (\u092e\u0941\u0916 \u092a\u0943\u0937\u094d\u0920)](https://mosdac.gov.in) [English](https://mosdac.gov.in/auth/realms/Mosdac/protocol/openid-connect/auth?response_type=code&scope=openid%20email&client_id=mosdac&state=0fnRvs..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/opendata/gps_water_vapour",
+    "link_text": "English",
+    "target_url": "https://mosdac.gov.in/auth/realms/Mosdac/protocol/openid-connect/auth?response_type=code&scope=openid%20email&client_id=mosdac&state=0fnRvsmRypzj9tHUiTdL8wtJO3U&redirect_uri=https%3A%2F%2Fwww.mosdac.gov.in%2Fuops%2Fredirect_uri&nonce=35cWlFrRRfoTTcDHOdqwN7XWxVcS0f4rTDOdsw-Ahoo",
+    "context_snippet": "[Home (\u092e\u0941\u0916 \u092a\u0943\u0937\u094d\u0920)](https://mosdac.gov.in) [English](https://mosdac.gov.in/auth/realms/Mosdac/protocol/openid-connect/auth?response_type=code&scope=openid%20email&client_id=mosdac&state=0fnRvsmRypzj9tHUiTdL8wtJO3U&redirect_uri=https%3A%2F%2Fwww.mosdac.gov.in%2Fuops%2Fredirect_uri&nonce=35cWlFrRRfoTTcDHOdqwN7XWxVcS0f4rTDOdsw-Ahoo) * [Hindi](https://mosdac.gov.in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1ae..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/opendata/gps_water_vapour",
+    "link_text": "Hindi",
+    "target_url": "https://mosdac.gov.in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1ae-a86b988114ed&kc_locale=hi",
+    "context_snippet": "...0fnRvsmRypzj9tHUiTdL8wtJO3U&redirect_uri=https%3A%2F%2Fwww.mosdac.gov.in%2Fuops%2Fredirect_uri&nonce=35cWlFrRRfoTTcDHOdqwN7XWxVcS0f4rTDOdsw-Ahoo) * [Hindi](https://mosdac.gov.in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1ae-a86b988114ed&kc_locale=hi) * [English](https://mosdac.gov.in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/opendata/gps_water_vapour",
+    "link_text": "English",
+    "target_url": "https://mosdac.gov.in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1ae-a86b988114ed&kc_locale=en",
+    "context_snippet": "...in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1ae-a86b988114ed&kc_locale=hi) * [English](https://mosdac.gov.in/auth/realms/Mosdac/login-actions/authenticate?client_id=mosdac&tab_id=_0HpCoar4ME&execution=9df053f1-55e1-4d2c-b1ae-a86b988114ed&kc_locale=en) \u092e\u0949\u0938\u094d\u0921\u0948\u0915 \u0938\u093f\u0902\u0917\u0932-\u0938\u093e\u0907\u0928-\u0911\u0928 (\u090f\u0938\u090f\u0938\u0913) MOSDAC Single-Sign-On (SSO) Username or email Password [Forgot Password?](https://mosdac.gov.in/auth/realms/Mosdac/l..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/opendata/gps_water_vapour",
+    "link_text": "Forgot Password?",
+    "target_url": "https://mosdac.gov.in/auth/realms/Mosdac/login-actions/reset-credentials?client_id=mosdac&tab_id=_0HpCoar4ME",
+    "context_snippet": "...&execution=9df053f1-55e1-4d2c-b1ae-a86b988114ed&kc_locale=en) \u092e\u0949\u0938\u094d\u0921\u0948\u0915 \u0938\u093f\u0902\u0917\u0932-\u0938\u093e\u0907\u0928-\u0911\u0928 (\u090f\u0938\u090f\u0938\u0913) MOSDAC Single-Sign-On (SSO) Username or email Password [Forgot Password?](https://mosdac.gov.in/auth/realms/Mosdac/login-actions/reset-credentials?client_id=mosdac&tab_id=_0HpCoar4ME) \u092e\u0949\u0938\u094d\u0921\u0948\u0915, \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0909\u092a\u092f\u094b\u0917 \u0915\u0947\u0902\u0926\u094d\u0930, \u0907\u0938\u0930\u094b, \u092d\u093e\u0930\u0924 \u0938\u0930\u0915\u093e\u0930 \u0926\u094d\u0935\u093e\u0930\u093e \u0928\u093f\u0930\u094d\u092e\u093f\u0924 \u0914\u0930 \u0938\u0902\u091a\u093e\u0932\u093f\u0924 **Owned and maintained by MOSDAC, Space Applications Centre, Indian Space..."
+  }
+]

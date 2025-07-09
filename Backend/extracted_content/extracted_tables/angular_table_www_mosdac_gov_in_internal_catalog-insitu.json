@@ -1,0 +1,122 @@
+[
+  {
+    "Sr_No": "1",
+    "Product_Name": "Diglipur,Portblair",
+    "Product_Description": "ANDAMAN & NICOBAR",
+    "Processing_Level": "15F488",
+    "Temporal_Resolution": "AGROMET18",
+    "Start_Date": "13.26",
+    "End_Date": "93.01",
+    "Processing_Status": "2011-02-15",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "2",
+    "Product_Name": "CRIDA Farm,Hayathnagar, Hyderabad",
+    "Product_Description": "ANDHRA PRADESH",
+    "Processing_Level": "15F0FF",
+    "Temporal_Resolution": "AGROMET02",
+    "Start_Date": "17.34",
+    "End_Date": "78.59",
+    "Processing_Status": "2010-12-31",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "3",
+    "Product_Name": "SDSC, SHAR, Sriharikota",
+    "Product_Description": "ANDHRA PRADESH",
+    "Processing_Level": "15F464",
+    "Temporal_Resolution": "AGROMET06",
+    "Start_Date": "13.62",
+    "End_Date": "80.23",
+    "Processing_Status": "2010-12-31",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "4",
+    "Product_Name": "Rajendra Agricultural University, PUSA, Samastipur",
+    "Product_Description": "BIHAR",
+    "Processing_Level": "15F47F",
+    "Temporal_Resolution": "AGROMET15",
+    "Start_Date": "25.98",
+    "End_Date": "85.67",
+    "Processing_Status": "2010-12-31",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "5",
+    "Product_Name": "Rice Research Station, Anand Agricultural University,  Nawagam.",
+    "Product_Description": "GUJARAT",
+    "Processing_Level": "15F102",
+    "Temporal_Resolution": "AGROMET03",
+    "Start_Date": "22.80",
+    "End_Date": "72.57",
+    "Processing_Status": "2010-12-31",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "6",
+    "Product_Name": "Junagadh Agricultural University, Junagadh",
+    "Product_Description": "GUJARAT",
+    "Processing_Level": "15F105",
+    "Temporal_Resolution": "AGROMET04",
+    "Start_Date": "21.50",
+    "End_Date": "70.44",
+    "Processing_Status": "2011-04-05",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "7",
+    "Product_Name": "Range Office Research Centre, Dhorado, Kutch",
+    "Product_Description": "GUJARAT",
+    "Processing_Level": "15F485",
+    "Temporal_Resolution": "AGROMET17",
+    "Start_Date": "23.80",
+    "End_Date": "69.50",
+    "Processing_Status": "2010-12-31",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "8",
+    "Product_Name": "Regional Agricultural  Research Station, Bijapur.",
+    "Product_Description": "KARNATAKA",
+    "Processing_Level": "15F0FC",
+    "Temporal_Resolution": "AGROMET01",
+    "Start_Date": "16.78",
+    "End_Date": "75.75",
+    "Processing_Status": "2011-07-30",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "9",
+    "Product_Name": "IISC Bengaluru. (Gopal Pura)",
+    "Product_Description": "KARNATAKA",
+    "Processing_Level": "15F518",
+    "Temporal_Resolution": "AGROMET24",
+    "Start_Date": "11.76",
+    "End_Date": "76.59",
+    "Processing_Status": "2012-01-31",
+    "DOI": "",
+    "DOI_Link": ""
+  },
+  {
+    "Sr_No": "10",
+    "Product_Name": "Zonal Agricultural Research Station, Powerkhed, Hoshangabad",
+    "Product_Description": "MADHYA PRADESH",
+    "Processing_Level": "15F46A",
+    "Temporal_Resolution": "AGROMET08",
+    "Start_Date": "22.70",
+    "End_Date": "77.74",
+    "Processing_Status": "2010-12-31",
+    "DOI": "",
+    "DOI_Link": ""
+  }
+]

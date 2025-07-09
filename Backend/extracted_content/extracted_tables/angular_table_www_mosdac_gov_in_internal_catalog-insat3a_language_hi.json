@@ -1,0 +1,74 @@
+[
+  {
+    "Sr_No": "1",
+    "Product_Name": "3A-CCD-AOD",
+    "Product_Description": "Aerosol optical Depth over Ocean",
+    "Processing_Level": "0",
+    "Temporal_Resolution": "3,5,7",
+    "Start_Date": "2009-04-29",
+    "End_Date": "2016-08-12",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3A-CCD-AOD",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3A-CCD-AOD"
+  },
+  {
+    "Sr_No": "2",
+    "Product_Name": "3A-CCD-COMPOSITE-NDV",
+    "Product_Description": "10 Day composite-normalised Difference Vegetation Index",
+    "Processing_Level": "L3",
+    "Temporal_Resolution": "3,5,6,7,9,11 GMT",
+    "Start_Date": "2008-08-22",
+    "End_Date": "2016-08-10",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3A-CCD-COMPOSITE-NDV",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3A-CCD-COMPOSITE-NDV"
+  },
+  {
+    "Sr_No": "3",
+    "Product_Name": "3A-CCD-GPS",
+    "Product_Description": "Co-registered Level-1B data for all 3 bands of INSAT-3A/CCD sensor",
+    "Processing_Level": "L1",
+    "Temporal_Resolution": "3,5,6,7,9,11 GMT",
+    "Start_Date": "2009-04-29",
+    "End_Date": "2016-08-12",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3A-CCD-GPS",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3A-CCD-GPS"
+  },
+  {
+    "Sr_No": "4",
+    "Product_Name": "3A-CCD-L1",
+    "Product_Description": "Level 1B data for all 3 Channels- VIS, NIR, SWIR Band",
+    "Processing_Level": "1",
+    "Temporal_Resolution": "3,5,7",
+    "Start_Date": "2008-08-22",
+    "End_Date": "2016-08-12",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3A-CCD-L1",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3A-CCD-L1"
+  },
+  {
+    "Sr_No": "5",
+    "Product_Name": "3A-CCD-L1-INDIAN SECTOR",
+    "Product_Description": "Level 1B Data Over Indian Sector for all 3 channels - VIS, NIR, SWIR",
+    "Processing_Level": "1",
+    "Temporal_Resolution": "3,5,7",
+    "Start_Date": "2008-08-22",
+    "End_Date": "2009-07-10",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3A-VHR-L1-INDIANSECTOR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3A-VHR-L1-INDIANSECTOR"
+  },
+  {
+    "Sr_No": "6",
+    "Product_Name": "3A-CCD-NDV",
+    "Product_Description": "Normalised Difference Vegetation Index",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "3,5,7",
+    "Start_Date": "2008-08-22",
+    "End_Date": "2016-08-12",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3A-CCD-NDV",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3A-CCD-NDV"
+  }
+]

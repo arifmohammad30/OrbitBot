@@ -1,0 +1,50 @@
+[
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "mosdac logo",
+    "target_url": "https://mosdac.gov.in/cloudburst/assets/img/transparent_mosdac_rapid.png",
+    "context_snippet": "![mosdac logo](https://mosdac.gov.in/cloudburst/assets/img/transparent_mosdac_rapid.png) --- CloudBurst Alerts over Western Himalayan Region Current Forecast: 2025-07-07 12:45 IST | --- Overlay Layers Selection:- Single Multiple..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/cloudburst/assets/img/area-icon-small.png",
+    "context_snippet": "...LC (India) DEM Bhuvan Maps Open Street Map Natural Earth Black Marble True Marble Previous Forecast/Events Select date: Tools | Legends ---|--- ![](https://mosdac.gov.in/cloudburst/assets/img/area-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/distance-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/graticule-icon-small.p..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/cloudburst/assets/img/distance-icon-small.png",
+    "context_snippet": "...ue Marble Previous Forecast/Events Select date: Tools | Legends ---|--- ![](https://mosdac.gov.in/cloudburst/assets/img/area-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/distance-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/graticule-icon-small.png) ---|---|--- ![](https://mosdac.gov.in/cloudburst/assets/img/point_ic..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/cloudburst/assets/img/graticule-icon-small.png",
+    "context_snippet": "...![](https://mosdac.gov.in/cloudburst/assets/img/area-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/distance-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/graticule-icon-small.png) ---|---|--- ![](https://mosdac.gov.in/cloudburst/assets/img/point_icon.png) --- ![](https://mosdac.gov.in/geoserver_2/worldview/wms?TRANSPARE..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/cloudburst/assets/img/point_icon.png",
+    "context_snippet": "...c.gov.in/cloudburst/assets/img/distance-icon-small.png) | ![](https://mosdac.gov.in/cloudburst/assets/img/graticule-icon-small.png) ---|---|--- ![](https://mosdac.gov.in/cloudburst/assets/img/point_icon.png) --- ![](https://mosdac.gov.in/geoserver_2/worldview/wms?TRANSPARENT=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic&LAYER=worldview:lulc2..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/geoserver_2/worldview/wms?TRANSPARENT=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic&LAYER=worldview:lulc250k_1819_18856&FORMAT=image/png&STYLES=",
+    "context_snippet": "...osdac.gov.in/cloudburst/assets/img/graticule-icon-small.png) ---|---|--- ![](https://mosdac.gov.in/cloudburst/assets/img/point_icon.png) --- ![](https://mosdac.gov.in/geoserver_2/worldview/wms?TRANSPARENT=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic&LAYER=worldview:lulc250k_1819_18856&FORMAT=image/png&STYLES=) --- AboutDisclaimerCredits AboutDisclaimerCredits The Space Applications Centre (SAC), has developed a satellite based heavy rainfall alert syste..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "Description_Alert_heavy_rain.pdf",
+    "target_url": "https://mosdac.gov.in/cloudburst/assets/documents/Description_Alert_heavy_rain.pdf",
+    "context_snippet": "...loudburst (Western Himalayan) Alerts are updated every half hourly at every 0.1x0.1-degree grid. For further details, refer to the attached document [Description_Alert_heavy_rain.pdf](https://mosdac.gov.in/cloudburst/assets/documents/Description_Alert_heavy_rain.pdf) Contact: admin@mosdac.gov.in. Technical query: bipasha@sac.isro.gov.in This is an experimental forecast. This information is to be used along with o..."
+  },
+  {
+    "source_page": "https://www.mosdac.gov.in/internal/nowcast-cloudburst",
+    "link_text": "",
+    "target_url": "https://mosdac.gov.in/cloudburst/",
+    "context_snippet": "..., Delhi (www.imd.gov.in) * Nowcast Data : AOSG/SAC * Forecast Data: AOSG/SAC Close Affected Land Use Statistics Affected Land Use Statistics Close [](https://mosdac.gov.in/cloudburst/) Analysis Chart +\u2212 \u21e7 i \u2922 50 km"
+  }
+]

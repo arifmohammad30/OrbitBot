@@ -1,0 +1,122 @@
+[
+  {
+    "Sr_No": "1",
+    "Product_Name": "K1-VHR-AMV",
+    "Product_Description": "Cloud Motion Vector and Water Vapour Winds derived from Kalpana IR and WV channel data",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2009-11-03",
+    "End_Date": "2012-08-06",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-AMV",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-AMV"
+  },
+  {
+    "Sr_No": "2",
+    "Product_Name": "K1-VHR-AMV-VIS",
+    "Product_Description": "Atmospheric Motion Vectors derived using Visible Water vapour and IR bands of Kalpana 1 VHRR data",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-02-21",
+    "End_Date": "2017-09-16",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-AMV-VIS",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-AMV-VIS"
+  },
+  {
+    "Sr_No": "3",
+    "Product_Name": "K1-VHR-BRT",
+    "Product_Description": "Kalpana IR Brightness  Temperature",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2009-11-03",
+    "End_Date": "2017-09-19",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-BRT",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-BRT"
+  },
+  {
+    "Sr_No": "4",
+    "Product_Name": "K1-VHR-BTW",
+    "Product_Description": "Kalpana WV Brightness Temperature",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2009-11-03",
+    "End_Date": "2017-09-19",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-BTW",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-BTW"
+  },
+  {
+    "Sr_No": "5",
+    "Product_Name": "K1-VHR-CMK",
+    "Product_Description": "Cloud mask derived using Kalpana-1 IR channel data at every Pixel resolution",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2010-05-04",
+    "End_Date": "2011-01-04",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-CMK",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-CMK"
+  },
+  {
+    "Sr_No": "6",
+    "Product_Name": "K1-VHR-CMV",
+    "Product_Description": "Cloud Motion Vector derived from Kalpana IR channel data",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2008-06-01",
+    "End_Date": "2010-09-08",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-CMV",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-CMV"
+  },
+  {
+    "Sr_No": "7",
+    "Product_Name": "K1-VHR-DAILYIMR",
+    "Product_Description": "INSAT Multi Chanel Rain; Rainfall estimate derived using Indian Multi-Spectral Rainfall algorithm (IMSRA)",
+    "Processing_Level": "3",
+    "Temporal_Resolution": "DAILY",
+    "Start_Date": "2010-06-15",
+    "End_Date": "2014-04-15",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-DAILYIMR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-DAILYIMR"
+  },
+  {
+    "Sr_No": "8",
+    "Product_Name": "K1-VHR-DAILYINS",
+    "Product_Description": "Kalpana derived daily insulation product",
+    "Processing_Level": "0",
+    "Temporal_Resolution": "DAILY",
+    "Start_Date": "2011-07-17",
+    "End_Date": "2017-09-10",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-DAILYINS",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-DAILYINS"
+  },
+  {
+    "Sr_No": "9",
+    "Product_Name": "K1-VHR-DAILYOLR",
+    "Product_Description": "Daily (averaged over previous 24 hr) Outgoing Longwave Radiation derieved from Kalpana - both IR and WV Channel data",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "DAILY",
+    "Start_Date": "2008-06-01",
+    "End_Date": "2017-09-19",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-DAILYOLR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-DAILYOLR"
+  },
+  {
+    "Sr_No": "10",
+    "Product_Name": "K1-VHR-DAILYQPE",
+    "Product_Description": "Daily Accumulated Quantitative Precipitation Estimates based on GPI Algoritham derived using Kalpana IR channel data",
+    "Processing_Level": "2",
+    "Temporal_Resolution": "DAILY",
+    "Start_Date": "2008-06-01",
+    "End_Date": "2014-04-15",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/K1-VHR-DAILYQPE",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/K1-VHR-DAILYQPE"
+  }
+]

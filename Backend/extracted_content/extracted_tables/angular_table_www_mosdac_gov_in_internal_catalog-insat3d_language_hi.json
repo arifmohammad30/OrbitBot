@@ -1,0 +1,122 @@
+[
+  {
+    "Sr_No": "1",
+    "Product_Name": "3DIMG_L1B_STD",
+    "Product_Description": "Level1 data for Imager 6 channels at half hour interval",
+    "Processing_Level": "L1B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-10-01",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L1B_STD",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L1B_STD"
+  },
+  {
+    "Sr_No": "2",
+    "Product_Name": "3DIMG_L1C_ASIA_MER",
+    "Product_Description": "IMAGER- 6 channel Level1 data in Mercator projection for Asian Sector",
+    "Processing_Level": "L1C",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-10-01",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L1C_ASIA_MER",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L1C_ASIA_MER"
+  },
+  {
+    "Sr_No": "3",
+    "Product_Name": "3DIMG_L1C_SGP",
+    "Product_Description": "Level1 IMAGER 6 channel  data of TIR1, TIR2, WV, VIS, SWIR, MIR Bands in Mercator projection",
+    "Processing_Level": "L1C",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-10-01",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L1C_SGP",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L1C_SGP"
+  },
+  {
+    "Sr_No": "4",
+    "Product_Name": "3DIMG_L2B_CMK",
+    "Product_Description": "INSAT-3D VHRR measures radiances in one visible and one SWIR band at 1 km spatial resolution, one MIR and two TIR bands at 4 km resolution, and one WV band at 8 km resolution. Radiances from 3 IR spectral bands TIR-1 , TIR-2 and MIR which are of same resolution of 4km are used in the INSAT cloud mask algorithm to estimate whether a given view of the earth surface is unobstructed by clouds",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-10-08",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_CMK",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_CMK"
+  },
+  {
+    "Sr_No": "5",
+    "Product_Name": "3DIMG_L2B_CTP",
+    "Product_Description": "Cloud top properties derived using INSAT3D IMAGER",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2018-11-30",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_CTP",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_CTP"
+  },
+  {
+    "Sr_No": "6",
+    "Product_Name": "3DIMG_L2B_FOG",
+    "Product_Description": "FOG",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-09-22",
+    "End_Date": "2013-11-15",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_FOG",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_FOG"
+  },
+  {
+    "Sr_No": "7",
+    "Product_Name": "3DIMG_L2B_HEM",
+    "Product_Description": "This product is derived on the basis of Hydro-Estimator method. It measures precipitation over Indian Region encompassing area between longitudes 30\u00b0E -to130\u00b0E and latitudes 50\u00b0N- 50\u00b0S.",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-10-08",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_HEM",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_HEM"
+  },
+  {
+    "Sr_No": "8",
+    "Product_Name": "3DIMG_L2B_IMC",
+    "Product_Description": "INSAT multispectral Rainfall Algorithm Technique (IMSRA) is one of the main operational rainfall retrieval algorithms for INSAT-3D. This algorithm estimates precipitation based on non-linear power law relationship established between infrared (IR) brightness temperatures (Tbs, 10.7 \u00b5m observations) and TRMM-PR surface rain rate.  Based on a number of case studies and research works carried out, a further refinement of the algorithm was made.",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2016-01-01",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_IMC",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_IMC"
+  },
+  {
+    "Sr_No": "9",
+    "Product_Name": "3DIMG_L2B_LST",
+    "Product_Description": "Land surface temperature (LST) is a key parameter in the land surface processes. LST is very useful input to various models related to agrometeorology, ecology, hydrology and climate.",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2015-03-04",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_LST",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_LST"
+  },
+  {
+    "Sr_No": "10",
+    "Product_Name": "3DIMG_L2B_OLR",
+    "Product_Description": "Total outgoing longwave radiation (OLR) flux, thermally emitted from earth atmosphere system, is estimated by applying regression equation relating OLR flux with INSAT-3D Imager observed WV (6.7&#956;m) and thermal infrared (TIR-1 10.5 &#956;m and TIR-2 11.5 &#956;m) radiances. The coefficients of the regression equations are determined from results of the Radiative Transfer Model simulation with various atmospheric conditions",
+    "Processing_Level": "L2B",
+    "Temporal_Resolution": "HALF HOURLY",
+    "Start_Date": "2013-10-01",
+    "End_Date": "2024-06-18",
+    "Processing_Status": "In-Active",
+    "DOI": "10.19038/SAC/10/3DIMG_L2B_OLR",
+    "DOI_Link": "https://dx.doi.org/10.19038/SAC/10/3DIMG_L2B_OLR"
+  }
+]
