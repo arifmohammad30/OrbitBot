@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Message from './Message';
 import TypingIndicator from './TypingIndicator';
+import botAvatar from '@/assets/bot-avatar.jpg';
 
 interface MessageData {
   id: string;
@@ -43,18 +44,15 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
       <div className="h-full overflow-y-auto p-4 space-y-4 scroll-smooth">
         {displayedMessages.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full text-center space-y-4 animate-fade-in-up">
-            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+            <div className="w-16 h-16 rounded-full border-2 border-primary-foreground/20 avatar-float overflow-hidden flex items-center justify-center">
+              <img src={botAvatar} alt="OrbitBot" className="w-full h-full object-cover rounded-full" />
             </div>
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Welcome to OrbitBot AI Assistant
               </h3>
               <p className="text-muted-foreground max-w-md">
-                I'm here to help you with ISRO satellite data information, weather monitoring, and more. 
-                Ask me anything about our satellite systems!
+                I'm your AI HELPER BOT !Ask anything regarding MOSDAC website.
               </p>
             </div>
           </div>

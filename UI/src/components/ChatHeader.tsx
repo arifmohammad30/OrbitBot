@@ -7,32 +7,37 @@ import botAvatar from '@/assets/bot-avatar.jpg';
 
 interface ChatHeaderProps {
   onExport: () => void;
-  onToggleTheme: () => void;
-  isDarkMode: boolean;
   isOnline: boolean;
   messagesCount: number;
 }
 
 const ChatHeader: React.FC<ChatHeaderProps> = ({ 
   onExport, 
-  onToggleTheme, 
-  isDarkMode, 
   isOnline, 
   messagesCount 
 }) => {
   const [showSettings, setShowSettings] = useState(false);
 
   return (
-    <header className="cosmic-header relative z-10 w-full">
+    <header
+      className="sticky top-0 z-20 w-full min-h-[64px] px-4"
+      style={{
+        background: 'linear-gradient(135deg, rgba(10,20,60,0.92) 0%, rgba(34,20,60,0.85) 60%, rgba(60,54,123,0.78) 100%)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        borderBottom: '1px solid rgba(80,80,160,0.18)',
+        boxShadow: '0 10px 30px -10px rgba(40,30,80,0.25)'
+      }}
+    >
       <div className="relative z-10 py-3 w-full">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-x-4">
           {/* Bot Info Section */}
-          <div className="flex items-center space-x-3 ml-3">
+          <div className="flex items-center gap-x-3 ml-0">
             <div className="relative">
               <img 
                 src={botAvatar} 
                 alt="OrbitBot" 
-                className="w-10 h-10 rounded-full border-2 border-primary-foreground/20 avatar-float"
+                className="w-12 h-12 rounded-full border-2 border-primary-foreground/20 avatar-float"
               />
               <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-primary-foreground/20 ${
                 isOnline ? 'bg-green-500' : 'bg-red-500'
@@ -56,23 +61,14 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
           </div>
 
           {/* Controls Section */}
-          <div className="flex items-center space-x-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={onToggleTheme}
-              className="text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
-
+          <div className="flex items-center space-x-2 ml-4">
             <Button
               variant="ghost"
               size="sm"
               onClick={onExport}
               className="text-primary-foreground hover:bg-primary-foreground/10"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-5 h-5" />
             </Button>
 
             <Popover open={showSettings} onOpenChange={setShowSettings}>
@@ -82,7 +78,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
                   size="sm"
                   className="text-primary-foreground hover:bg-primary-foreground/10"
                 >
-                  <Settings className="w-4 h-4" />
+                  <Settings className="w-5 h-5" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-56" align="end">
@@ -93,10 +89,6 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
                     <Button variant="ghost" size="sm" onClick={onExport} className="justify-start">
                       <Download className="w-4 h-4 mr-2" />
                       Export Chat
-                    </Button>
-                    <Button variant="ghost" size="sm" onClick={onToggleTheme} className="justify-start">
-                      {isDarkMode ? <Sun className="w-4 h-4 mr-2" /> : <Moon className="w-4 h-4 mr-2" />}
-                      {isDarkMode ? 'Light Mode' : 'Dark Mode'}
                     </Button>
                   </div>
                 </div>

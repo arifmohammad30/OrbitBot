@@ -161,7 +161,7 @@ const Index = () => {
   }, [handleSendMessage]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col">
       {/* Enhanced Header */}
       <ChatHeader
         onExport={handleExport}
@@ -172,7 +172,7 @@ const Index = () => {
       />
 
       {/* Main Chat Area */}
-      <main className="flex-1 flex flex-col w-full max-w-4xl mx-auto sm:rounded-xl sm:shadow-lg sm:my-4 bg-background/80">
+      <main className="flex-1 flex flex-col w-full max-w-4xl mx-auto sm:rounded-xl sm:shadow-lg sm:my-4">
         <ChatWindow messages={messages} isTyping={isTyping} />
         
         {/* Quick Actions - Only show when no messages */}

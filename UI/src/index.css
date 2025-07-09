@@ -133,8 +133,11 @@
   body {
     margin: 0;
     @apply bg-background text-foreground font-inter;
-    background: var(--gradient-nebula);
+    background:
+      linear-gradient(rgba(20, 20, 40, 0.75), rgba(20, 20, 40, 0.85)),
+      url('/Gemini_Generated_Image_vc36s5vc36s5vc36.png') center center / cover no-repeat fixed;
     min-height: 100vh;
+    animation: bg-bounce 8s ease-in-out infinite;
   }
 }
 
@@ -174,9 +177,12 @@
 
   /* Quick Action Buttons */
   .quick-action {
-    @apply px-4 py-2 rounded-full text-sm border border-border/50 hover:border-primary/50 
-           bg-card/50 hover:bg-primary/10 text-foreground hover:text-primary
-           transition-all duration-300 hover:shadow-[var(--shadow-glow)] hover:scale-105;
+    @apply px-4 py-2 rounded-full text-sm border border-border/70 bg-muted/70 text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105;
+    box-shadow: none;
+  }
+
+  .quick-action:hover {
+    box-shadow: 0 0 4px 1px rgba(255,255,255,0.10), 0 0 6px 1px var(--tw-shadow-color, #a5b4fc);
   }
 
   /* Chat Input Styling */
@@ -208,16 +214,18 @@
 
   /* Cosmic Header */
   .cosmic-header {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden backdrop-blur-md border-b border-white/10;
     background: var(--gradient-cosmic);
     box-shadow: var(--shadow-cosmic);
+    background-color: rgba(30, 34, 54, 0.55); /* deep space glass tint */
   }
 
   .cosmic-header::before {
     content: '';
-    @apply absolute inset-0 opacity-20;
-    background: radial-gradient(circle at 30% 20%, hsl(260 70% 65% / 0.3), transparent 50%),
-                radial-gradient(circle at 80% 80%, hsl(220 70% 60% / 0.3), transparent 50%);
+    @apply absolute inset-0 opacity-40 pointer-events-none;
+    background: radial-gradient(circle at 30% 20%, hsl(260 70% 65% / 0.25), transparent 50%),
+                radial-gradient(circle at 80% 80%, hsl(220 70% 60% / 0.18), transparent 50%);
+    backdrop-filter: blur(12px);
   }
 }
 
@@ -267,12 +275,12 @@
     }
   }
 
-  @keyframes avatar-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  @keyframes avatar-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(140, 140, 255, 0.22); }
+    50% { box-shadow: 0 0 20px 10px rgba(140, 140, 255, 0.38); }
   }
   .avatar-float {
-    animation: avatar-float 2s ease-in-out infinite;
+    animation: avatar-glow 2.8s ease-in-out infinite;
   }
 
   @keyframes avatar-bounce {
@@ -294,5 +302,10 @@
 
   .animate-slide-in-right {
     animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes bg-bounce {
+    0%, 100% { background-position: center 0; }
+    50% { background-position: center 30px; }
   }
 }
