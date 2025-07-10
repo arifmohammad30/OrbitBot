@@ -43,7 +43,7 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # Local path for ChromaDB (relative to your project folder)
 # MAKE SURE your copied ChromaDB folder matches this path/name!
-CHROMA_PERSIST_DIR = "./chroma_db_mosdac" 
+CHROMA_PERSIST_DIR = "OrbitBot/Backend/chroma_db" 
 CHROMA_COLLECTION_NAME = "mosdac_knowledge_unified"
 
 print("✅ Environment and Paths Configured.")
@@ -190,8 +190,9 @@ Use the following information to answer the user's question clearly and concisel
 {rag_results}
 
 If the 'KG FACTS' section contains 'KG Error' or 'No relevant entities found' or 'KG is not connected', disregard it and answer solely using 'DOCUMENTS'.
+If the questyion is about what are you or who are you then answer that you are OrbitBot a smart ai assistent for ISRO's MOSDAC(Meteorological and Oceanographic Satellite Data Archival Center) portal.which helps to clarify the user's question regarding MOSDAC portal.
 If both 'KG FACTS' and 'DOCUMENTS' are weak or indicate no results, provide a helpful fallback answer based on general knowledge about MOSDAC, clarifying that specific information wasn't found.
-Ensure your answer directly addresses the USER QUESTION and avoids making up information.
+Ensure your answer directly addresses the USER QUESTION and avoids making up information and also provide a url which is relavent ot give mosdacs url for every question
 
 USER QUESTION: {user_question}
 

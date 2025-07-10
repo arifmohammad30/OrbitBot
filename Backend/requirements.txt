@@ -3,8 +3,8 @@ uvicorn[standard]
 langchain
 langchain-community
 langchain-together
-neo4j
 chromadb
 sentence-transformers
-pydantic
 python-dotenv
+nest_asyncio
+neo4j

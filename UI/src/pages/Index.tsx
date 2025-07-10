@@ -136,7 +136,7 @@ const Index = () => {
       const delay = 1500 + Math.random() * 1000;
       await new Promise(resolve => setTimeout(resolve, delay));
 
-      const response = await fetch("http://localhost:8000/query-fusion", {
+      const response = await fetch("http://127.0.0.1:8000/hybrid-search", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: messageText })
