@@ -1,0 +1,11 @@
+langchain
+langchain-community
+chromadb
+sentence-transformers
+langdetect
+nest_asyncio
+fastapi
+uvicorn[standard]
+langchain-together
+neo4j
+python-dotenv

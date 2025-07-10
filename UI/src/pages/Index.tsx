@@ -28,61 +28,43 @@ const Index = () => {
   const [isOnline, setIsOnline] = useState(true);
   const { toast } = useToast();
 
-  // Mock responses for demonstration
   const mockResponses: { [key: string]: string } = {
     "INSAT-3DR features": "INSAT-3DR is an advanced meteorological satellite with improved imaging capabilities. It features:\n\n• Enhanced Imager with 1 km spatial resolution for visible band\n• 19-channel Sounder for atmospheric profiling\n• Data Relay Transponder for automatic weather stations\n• Search and Rescue Transponder\n• Real-time weather monitoring capabilities\n\nLaunched in 2016, it's positioned at 74°E longitude and provides crucial weather data for the Indian subcontinent.",
-    
     "Weather monitoring": "MOSDAC provides comprehensive weather monitoring through multiple satellite systems:\n\n🛰️ **Real-time Monitoring:**\n• Cyclone tracking and intensity analysis\n• Rainfall estimation and nowcasting\n• Sea surface temperature monitoring\n• Wind speed and direction analysis\n\n🌡️ **Data Products:**\n• Hourly/3-hourly weather bulletins\n• Quantitative Precipitation Estimates (QPE)\n• Atmospheric motion vectors\n• Outgoing Longwave Radiation (OLR)\n\nOur systems monitor 24/7 to provide early warnings for severe weather events across India and the Indian Ocean region.",
-    
     "Spatial resolution": "Spatial resolution varies by satellite instrument and spectral band:\n\n**INSAT-3D/3DR Imager:**\n• Visible (0.55-0.75 μm): 1 km\n• Shortwave IR (1.55-1.70 μm): 1 km\n• Water Vapor (6.50-7.10 μm): 8 km\n• Thermal IR (10.3-11.3 μm): 4 km\n\n**INSAT-3D/3DR Sounder:**\n• Long-wave IR channels: 10 km\n• Short/Mid-wave IR: 10 km\n\n**Oceansat-2:**\n• Ocean Color Monitor: 360 m\n• Scatterometer: 50 km\n\nHigher resolution provides more detailed observations but generates larger data volumes.",
-    
     "Data download": "MOSDAC offers multiple ways to access satellite data:\n\n**Web Portal:** https://mosdac.gov.in\n• Browse and download archived data\n• Real-time data visualization\n• Custom data extraction tools\n\n**FTP Services:**\n• Bulk data download for research\n• Automated data retrieval\n• Scheduled data delivery\n\n**API Access:**\n• RESTful APIs for developers\n• JSON/XML data formats\n• Authentication required\n\n**Data Formats:**\n• HDF5, NetCDF for processed data\n• GRIB for meteorological data\n• GeoTIFF for image products\n\nRegistration required for data access. Educational and research use is free!",
-    
     "Real-time imagery": "MOSDAC provides real-time satellite imagery updated every 30 minutes:\n\n🌍 **Available Products:**\n• Full Disk imagery from INSAT-3D/3DR\n• Indian region focus at higher resolution\n• Multi-spectral composite images\n• Enhancement products (temperature, moisture)\n\n⚡ **Update Frequency:**\n• Visible imagery: Every 30 minutes (daylight only)\n• Infrared imagery: Every 30 minutes (24/7)\n• Rapid scan: Every 15 minutes for severe weather\n\n🔍 **Applications:**\n• Cyclone monitoring and tracking\n• Rainfall nowcasting\n• Fog and low cloud detection\n• Aviation weather support\n\nImages are available within 15-20 minutes of satellite observation!",
-    
     "Cyclone tracking": "MOSDAC's cyclone tracking system provides comprehensive storm monitoring:\n\n🌪️ **Tracking Capabilities:**\n• Automatic cyclone detection and tracking\n• Intensity estimation using Dvorak technique\n• Eye wall replacement cycle monitoring\n• Storm structure analysis\n\n📊 **Key Parameters:**\n• Maximum sustained winds\n• Central pressure estimation\n• Storm motion (speed & direction)\n• Size of storm circulation\n\n⚠️ **Warning Products:**\n• 3-hourly position updates\n• 72-hour track forecasts\n• Intensity change predictions\n• Landfall time and location estimates\n\n🎯 **Accuracy:**\n• Position accuracy: ±25 km\n• Intensity accuracy: ±15 kt\n• Track forecast skill: >85% at 24 hours\n\nOur system has successfully tracked over 200+ cyclones since 2010!"
   };
 
   const generateResponse = useCallback((userMessage: string): string => {
     const lowerMessage = userMessage.toLowerCase();
-    
-    // Check for exact matches first
     for (const [key, response] of Object.entries(mockResponses)) {
-      if (lowerMessage.includes(key.toLowerCase())) {
-        return response;
-      }
+      if (lowerMessage.includes(key.toLowerCase())) return response;
     }
-    
-    // General responses for common queries
+
     if (lowerMessage.includes('resolution') || lowerMessage.includes('spatial')) {
       return mockResponses["Spatial resolution"];
     }
-    
     if (lowerMessage.includes('weather') || lowerMessage.includes('monitoring')) {
       return mockResponses["Weather monitoring"];
     }
-    
     if (lowerMessage.includes('insat') || lowerMessage.includes('satellite')) {
       return mockResponses["INSAT-3DR features"];
     }
-    
     if (lowerMessage.includes('download') || lowerMessage.includes('data')) {
       return mockResponses["Data download"];
     }
-    
     if (lowerMessage.includes('real-time') || lowerMessage.includes('imagery')) {
       return mockResponses["Real-time imagery"];
     }
-    
     if (lowerMessage.includes('cyclone') || lowerMessage.includes('storm')) {
       return mockResponses["Cyclone tracking"];
     }
-    
-    // Default response
-    return "Thank you for your question about ISRO satellite systems! I can help you with information about:\n\n• INSAT-3D/3DR satellite features and capabilities\n• Weather monitoring and forecasting\n• Spatial resolution of different instruments\n• Data download procedures and formats\n• Real-time imagery and products\n• Cyclone tracking and analysis\n\nPlease feel free to ask about any specific aspect you'd like to know more about. You can also use the quick action buttons below for common queries!";
+
+    return "Thank you for your question about ISRO satellite systems! I can help you with:\n\n• INSAT-3D/3DR satellite features\n• Weather monitoring and forecasting\n• Spatial resolution info\n• Data download procedures\n• Real-time imagery\n• Cyclone tracking\n\nTry the quick action buttons below too!";
   }, []);
 
-  // Theme switching
   const handleToggleTheme = useCallback(() => {
     setIsDarkMode(prev => !prev);
     document.documentElement.classList.toggle('dark');
@@ -92,7 +74,6 @@ const Index = () => {
     });
   }, [isDarkMode, toast]);
 
-  // Export functionality
   const handleExport = useCallback(() => {
     const exportData = {
       timestamp: new Date().toISOString(),
@@ -119,10 +100,8 @@ const Index = () => {
     });
   }, [messages, toast]);
 
-  // Connection status simulation
   useEffect(() => {
     const interval = setInterval(() => {
-      // Simulate occasional offline status
       setIsOnline(prev => Math.random() > 0.1 ? true : prev);
     }, 30000);
 
@@ -141,7 +120,6 @@ const Index = () => {
     setMessages(prev => [...prev, userMessage]);
     setIsTyping(true);
 
-    // If files are attached, show a placeholder message and do not send to backend
     if (files && files.length > 0) {
       const botResponse: MessageData = {
         id: (Date.now() + 1).toString(),
@@ -155,7 +133,9 @@ const Index = () => {
     }
 
     try {
-      // Send the question to the backend
+      const delay = 1500 + Math.random() * 1000;
+      await new Promise(resolve => setTimeout(resolve, delay));
+
       const response = await fetch("http://localhost:8000/query-fusion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -174,18 +154,19 @@ const Index = () => {
 
       setMessages(prev => [...prev, botResponse]);
     } catch (error) {
+      const fallback = generateResponse(messageText);
       setMessages(prev => [
         ...prev,
         {
           id: (Date.now() + 2).toString(),
-          text: "Sorry, I couldn't get an answer from the server.",
+          text: fallback || "Sorry, I couldn't get an answer from the server.",
           sender: 'bot',
           timestamp: new Date()
         }
       ]);
     } finally {
       setIsTyping(false);
-    }, 1500 + Math.random() * 1000); // Random delay between 1.5-2.5 seconds
+    }
   }, [generateResponse]);
 
   const handleQuickAction = useCallback((action: string) => {
@@ -194,7 +175,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Enhanced Header */}
       <ChatHeader
         onExport={handleExport}
         onToggleTheme={handleToggleTheme}
@@ -203,11 +183,9 @@ const Index = () => {
         messagesCount={messages.length}
       />
 
-      {/* Main Chat Area */}
       <main className="flex-1 flex flex-col w-full max-w-4xl mx-auto sm:rounded-xl sm:shadow-lg sm:my-4">
         <ChatWindow messages={messages} isTyping={isTyping} />
-        
-        {/* Quick Actions - Only show when no messages */}
+
         {messages.length === 0 && (
           <div className="px-4 py-2">
             <p className="text-sm text-muted-foreground mb-3 text-center">
@@ -220,7 +198,6 @@ const Index = () => {
           </div>
         )}
 
-        {/* Enhanced Message Input */}
         <MessageInput 
           onSendMessage={handleSendMessage}
           disabled={isTyping}
