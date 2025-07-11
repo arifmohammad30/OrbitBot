@@ -22,8 +22,8 @@ RUN apt-get update && \
 # Upgrade pip
 RUN pip install --upgrade pip setuptools wheel
 
-# Copy stable requirements
-COPY requirements-stable.txt ./requirements.txt
+# Copy requirements
+COPY requirements.txt ./requirements.txt
 
 # Install packages with multiple fallback strategies
 RUN pip install --no-cache-dir fastapi==0.104.1 uvicorn[standard]==0.24.0 python-dotenv==1.0.0 requests==2.31.0 || \
