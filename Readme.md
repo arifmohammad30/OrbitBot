@@ -272,7 +272,7 @@ MIT License
 ## 👥 Team
 
 * **Mohammad Arif**
-* **Tamma Kundanareddy**
+* **Tamma Kundana Reddy**
 * **Mandapati Lakshman Kumar**
 
 ---
