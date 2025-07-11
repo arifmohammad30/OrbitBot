@@ -34,7 +34,7 @@ ISRO/
 
 ## 🏗️ Architecture & Workflow
 
-![Workflow](UI/public/WhatsApp Image 2025-07-11 at 4.07.44 PM.jpeg)
+![Workflow](UI/public/workflow)
 
 ---
 
