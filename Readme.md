@@ -120,6 +120,15 @@ A knowledge graph is built from the unified corpus to enable relationship-based 
 
 ## 🖥️ Frontend (UI)
 
+The frontend is a modern, responsive web application built with React, Vite, TypeScript, and Tailwind CSS. It provides an intuitive chat interface for users to interact with the AI assistant, view responses, and access quick actions. The UI is optimized for both desktop and mobile devices, ensuring a seamless experience across platforms.
+
+**Key Features:**
+- Conversational chat interface
+- Quick action buttons for common queries
+- Dark mode support
+- Responsive design for all screen sizes
+- Easy integration with the backend API
+
 ### Tech Stack
 
 - React + Vite + TypeScript
@@ -155,6 +164,15 @@ Visit [http://localhost:5173](http://localhost:5173) (or as shown in your termin
 
 ## 🧠 Backend (API)
 
+The backend is a scalable FastAPI application that powers the AI assistant. It orchestrates hybrid search using both a knowledge graph and a vector database, leverages large language models for answer generation, and exposes secure, well-documented API endpoints for the frontend.
+
+**Key Features:**
+- Hybrid RAG (Retrieval-Augmented Generation) search
+- Integration with ChromaDB (vector DB) and Neo4j (knowledge graph)
+- Uses HuggingFace and TogetherAI for embeddings and LLMs
+- RESTful API with automatic Swagger documentation
+- CORS-enabled for frontend integration
+  
 ### Tech Stack
 
 - FastAPI (Python 3.11)
