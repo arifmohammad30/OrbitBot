@@ -32,7 +32,9 @@ jobs:
         
     - name: Push to GitHub Container Registry
       run: |
-        docker tag orbitbot-backend ghcr.io/${{ github.repository }}/orbitbot-backend:latest
-        docker push ghcr.io/${{ github.repository }}/orbitbot-backend:latest
-        docker tag orbitbot-backend ghcr.io/${{ github.repository }}/orbitbot-backend:${{ github.sha }}
-        docker push ghcr.io/${{ github.repository }}/orbitbot-backend:${{ github.sha }}
+        # Convert repository name to lowercase for GHCR compatibility
+        REPO_NAME=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
+        docker tag orbitbot-backend ghcr.io/$REPO_NAME/orbitbot-backend:latest
+        docker push ghcr.io/$REPO_NAME/orbitbot-backend:latest
+        docker tag orbitbot-backend ghcr.io/$REPO_NAME/orbitbot-backend:${{ github.sha }}
+        docker push ghcr.io/$REPO_NAME/orbitbot-backend:${{ github.sha }}
