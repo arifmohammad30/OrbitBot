@@ -32,9 +32,8 @@ jobs:
         
     - name: Push to GitHub Container Registry
       run: |
-        # Convert repository name to lowercase for GHCR compatibility
-        REPO_NAME=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
-        docker tag orbitbot-backend ghcr.io/$REPO_NAME/orbitbot-backend:latest
-        docker push ghcr.io/$REPO_NAME/orbitbot-backend:latest
-        docker tag orbitbot-backend ghcr.io/$REPO_NAME/orbitbot-backend:${{ github.sha }}
-        docker push ghcr.io/$REPO_NAME/orbitbot-backend:${{ github.sha }}
+        # Use the repository owner and name directly
+        docker tag orbitbot-backend ghcr.io/${{ github.repository_owner }}/orbitbot-backend:latest
+        docker push ghcr.io/${{ github.repository_owner }}/orbitbot-backend:latest
+        docker tag orbitbot-backend ghcr.io/${{ github.repository_owner }}/orbitbot-backend:${{ github.sha }}
+        docker push ghcr.io/${{ github.repository_owner }}/orbitbot-backend:${{ github.sha }}
