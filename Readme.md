@@ -34,19 +34,7 @@ ISRO/
 
 ## 🏗️ Architecture & Workflow
 
-```mermaid
-graph TD
-  A[User] -->|Asks Question| B(React/Vite Frontend)
-  B -->|POST /hybrid-search| C(FastAPI Backend)
-  C -->|Query| D1[Knowledge Graph (Neo4j)]
-  C -->|Query| D2[Vector DB (ChromaDB)]
-  D1 -->|KG Facts| C
-  D2 -->|Relevant Docs| C
-  C -->|Prompt| E[LLM (LangChain + TogetherAI)]
-  E -->|Answer| C
-  C -->|Response| B
-  B -->|Displays Answer| A
-```
+![Workflow](OrbitBot\UI\public\WhatsApp Image 2025-07-11 at 4.07.44 PM.jpeg)
 
 ---
 
