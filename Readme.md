@@ -1,6 +1,6 @@
 # OrbitBot: MOSDAC Knowledge Navigator
 
-OrbitBot is a full-stack AI-powered assistant for ISRO's MOSDAC (Meteorological and Oceanographic Satellite Data Archival Center) portal it is a part of  Bharatiya Antariksh Hackathon 2025 . It leverages advanced Retrieval-Augmented Generation (RAG) techniques, combining a knowledge graph, vector database, and large language models to provide accurate, context-rich answers about MOSDAC's data and services.
+OrbitBot is a full-stack AI-powered assistant for ISRO's MOSDAC (Meteorological and Oceanographic Satellite Data Archival Center) portal it is a part of  Bharatiya Antariksh Hackathon 2025 conducted by @ISRO . It leverages advanced Retrieval-Augmented Generation (RAG) techniques, combining a knowledge graph, vector database, and large language models to provide accurate, context-rich answers about MOSDAC's data and services.
 
 ---
 
