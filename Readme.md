@@ -37,6 +37,86 @@ ISRO/
 ![Workflow](UI/public/workflow)
 
 ---
+## 🛰️ Data Pipeline & Extraction
+
+This project uses a robust data pipeline to crawl, parse, and extract structured and unstructured content from the MOSDAC portal:
+
+**Technologies Used:**
+- **Python** (Google Colab environment)
+- **crawl4ai** for deep web crawling and link discovery
+- **Playwright** for headless browser automation (dynamic content rendering)
+- **BeautifulSoup (bs4)** for HTML parsing and data extraction
+- **pandas, lxml, requests** for data manipulation and HTTP requests
+- **Google Drive** for persistent storage of extracted data
+
+**Workflow Summary:**
+- Deep crawl of the MOSDAC portal to discover all relevant URLs
+- Filtering and deduplication of discovered links
+- Parsing HTML content to extract FAQs, tables, and other structured data
+- Saving extracted data to Google Drive for further processing and use in the AI assistant
+
+## 🗃️ Data Unification & Corpus Creation
+
+After extraction, all collected data (Markdown, JSON FAQs, tables, links, PDF text) is consolidated into a single, unified JSON corpus for downstream AI processing.
+
+**Technologies Used:**
+- **Python** (Google Colab environment)
+- **PyPDF2** for PDF text extraction
+- **json, os, re, typing** for file I/O, regex, and data processing
+
+**Workflow Summary:**
+- Read and process unstructured Markdown files (web page content)
+- Read and process structured JSON files (FAQs, tables, links)
+- Extract text from PDF files
+- Normalize and combine all data into a consistent document format
+- Assign source URLs and content type details for traceability
+- Save the unified corpus as a single JSON file for use in the AI assistant
+
+## 🧠 Vector Database Creation
+
+After unification, the corpus is embedded and indexed for semantic search using a vector database.
+
+**Technologies Used:**
+- **Python** (Google Colab)
+- **ChromaDB** for vector storage and retrieval
+- **LangChain** for vector DB, embeddings, and document chunking
+- **Sentence Transformers** (HuggingFace, `all-MiniLM-L6-v2`) for text embeddings
+- **langdetect** for language filtering
+- **json, os, shutil, re** for file and text processing
+
+**Workflow Summary:**
+- Load the unified corpus from Google Drive
+- Clean and filter text (remove noise, non-English, etc.)
+- Split documents into chunks for embedding
+- Generate embeddings using Sentence Transformers
+- Store embeddings in ChromaDB for semantic search
+- Verify the database with a sample semantic search
+- Copy the resulting ChromaDB back to Google Drive for persistence
+
+---
+
+## 🕸️ Knowledge Graph Creation
+
+A knowledge graph is built from the unified corpus to enable relationship-based and entity-centric queries.
+
+**Technologies Used:**
+- **Python** (Google Colab)
+- **Neo4j** (via `py2neo`) for graph database storage
+- **spaCy** (with `en_core_web_lg`) for NLP and entity extraction
+- **langdetect** for language filtering
+- **tqdm** for progress bars
+- **pandas** for data manipulation
+- **json, os, re** for file and text processing
+
+**Workflow Summary:**
+- Load the unified corpus from Google Drive
+- Clean and filter text for NER
+- Use spaCy (with custom entity rules) to extract entities (satellites, sensors, organizations, etc.)
+- Filter and deduplicate entities
+- Populate Neo4j with clean nodes (entities) and their sources
+- Scan corpus for sentences containing multiple entities to extract relationship triplets (subject, predicate, object)
+- Populate Neo4j with relationships between entities
+
 
 ## 🖥️ Frontend (UI)
 
