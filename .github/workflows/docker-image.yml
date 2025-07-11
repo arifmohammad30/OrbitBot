@@ -21,7 +21,7 @@ jobs:
     - name: Build Docker image
       run: |
         cd Backend
-        docker build -t orbitbot-backend .
+        docker build -f Dockerfile.robust -t orbitbot-backend .
         
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v3

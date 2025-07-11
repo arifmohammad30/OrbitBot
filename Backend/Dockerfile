@@ -29,9 +29,9 @@ COPY requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir fastapi==0.104.1 uvicorn[standard]==0.24.0 python-dotenv==1.0.0 requests==2.31.0 || \
     pip install --no-cache-dir --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org fastapi==0.104.1 uvicorn[standard]==0.24.0 python-dotenv==1.0.0 requests==2.31.0
 
-# Install LangChain packages
-RUN pip install --no-cache-dir langchain==0.0.350 langchain-community==0.0.10 langchain-together==0.3.0 || \
-    pip install --no-cache-dir --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain==0.0.350 langchain-community==0.0.10 langchain-together==0.3.0
+# Install LangChain packages with more flexible versions
+RUN pip install --no-cache-dir "langchain>=0.0.350,<0.1.0" "langchain-community>=0.0.10,<0.1.0" "langchain-together>=0.3.0,<0.4.0" || \
+    pip install --no-cache-dir --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org "langchain>=0.0.350,<0.1.0" "langchain-community>=0.0.10,<0.1.0" "langchain-together>=0.3.0,<0.4.0"
 
 # Install ChromaDB and sentence-transformers
 RUN pip install --no-cache-dir chromadb==0.4.18 sentence-transformers==2.2.2 || \
