@@ -17,9 +17,9 @@ from fastapi.middleware.cors import CORSMiddleware # Essential for frontend acce
 from langchain_community.vectorstores import Chroma
 from langchain_community.graphs import Neo4jGraph
 from langchain_together import ChatTogether
-from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
+from langchain.embeddings import HuggingFaceInferenceAPIEmbeddings
 
 # Pydantic for API request/response models
 from pydantic import BaseModel, Field
@@ -46,6 +46,9 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 CHROMA_PERSIST_DIR = "OrbitBot/Backend/chroma_db" 
 CHROMA_COLLECTION_NAME = "mosdac_knowledge_unified"
 
+# Load HuggingFace API key from .env
+HF_API_KEY = os.getenv("HF_API_KEY")
+
 print("✅ Environment and Paths Configured.")
 
 # --- Step 3: Initialize LLM, KG, VectorDB ---
@@ -59,7 +62,11 @@ llm = ChatTogether(
 )
 print("✅ LLM Initialized.")
 
-embedding_model = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+# Use HuggingFace Inference API for embeddings (no local model, low memory)
+embedding_model = HuggingFaceInferenceAPIEmbeddings(
+    api_key=HF_API_KEY,
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
 print("✅ Embedding Model Loaded.")
 
 try:
