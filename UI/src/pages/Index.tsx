@@ -4,6 +4,7 @@ import MessageInput from '@/components/MessageInput';
 import QuickActions from '@/components/QuickActions';
 import ChatHeader from '@/components/ChatHeader';
 import { useToast } from '@/hooks/use-toast';
+import { FAQs } from '../data/faqs';
 
 interface AttachedFile {
   id: string;
@@ -173,6 +174,18 @@ const Index = () => {
     handleSendMessage(`Tell me about ${action}`);
   }, [handleSendMessage]);
 
+  const insertFAQAnswer = useCallback((faqQuestion: string) => {
+    const faq = FAQs.find(f => f.question === faqQuestion);
+    if (!faq) return;
+    const botResponse: MessageData = {
+      id: (Date.now() + 3).toString(),
+      text: faq.answer,
+      sender: 'bot',
+      timestamp: new Date()
+    };
+    setMessages(prev => [...prev, botResponse]);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <ChatHeader
@@ -192,7 +205,12 @@ const Index = () => {
               Try these quick actions:
             </p>
             <QuickActions 
-              onQuickAction={handleQuickAction}
+              onQuickAction={async (faqQuestion: string) => {
+                setIsTyping(true);
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                insertFAQAnswer(faqQuestion);
+                setIsTyping(false);
+              }}
               disabled={isTyping}
             />
           </div>

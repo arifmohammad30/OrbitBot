@@ -147,14 +147,14 @@
     @apply rounded-2xl rounded-bl-md p-4 max-w-[80%] shadow-[var(--shadow-message)];
     background: var(--gradient-message);
     color: hsl(var(--bot-message-foreground));
-    animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
   }
 
   .message-user {
     @apply rounded-2xl rounded-br-md p-4 max-w-[80%] shadow-[var(--shadow-message)] ml-auto;
     background: var(--gradient-user);
     color: hsl(var(--user-message-foreground));
-    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
   }
 
   /* Typing Indicator Animation */
@@ -267,7 +267,7 @@
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(8px);
     }
     to {
       opacity: 1;
@@ -293,7 +293,7 @@
 
   /* Utility Classes */
   .animate-fade-in-up {
-    animation: fadeInUp 0.4s ease-out;
+    animation: fadeInUp 0.3s cubic-bezier(0.4,0,0.2,1);
   }
 
   .animate-slide-in-left {

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import botAvatar from '@/assets/bot-avatar.jpg';
 import userAvatar from '@/assets/user-avatar.png';
+import { Copy } from 'lucide-react';
 
 interface AttachedFile {
   id: string;
@@ -24,6 +25,7 @@ interface MessageProps {
 
 const Message: React.FC<MessageProps> = ({ message }) => {
   const isBot = message.sender === 'bot';
+  const [copied, setCopied] = useState(false);
 
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString('en-US', { 
@@ -33,8 +35,16 @@ const Message: React.FC<MessageProps> = ({ message }) => {
     });
   };
 
+  const handleCopy = async () => {
+    if (message.text) {
+      await navigator.clipboard.writeText(message.text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    }
+  };
+
   return (
-    <div className={`flex ${isBot ? 'justify-start' : 'justify-end'} animate-fade-in-up`}>
+    <div className={`flex ${isBot ? 'justify-start' : 'justify-end'}`}>
       <div className="flex flex-col max-w-[85%] sm:max-w-[70%]">
         {/* Avatar and Name */}
         <div className={`flex items-center space-x-2 mb-1 ${isBot ? 'ml-1' : 'mr-1 justify-end'}`}>
@@ -61,7 +71,7 @@ const Message: React.FC<MessageProps> = ({ message }) => {
         </div>
         
         {/* Message Content */}
-        <div className={`${isBot ? 'message-bot' : 'message-user'} relative inline-block min-w-[64px]`}>
+        <div className={`${isBot ? 'message-bot' : 'message-user'} animate-fade-in-up relative inline-block min-w-[64px]`}>
           {/* Attached Files */}
           {message.files && message.files.length > 0 && (
             <div className="mb-3 space-y-2">
@@ -90,6 +100,18 @@ const Message: React.FC<MessageProps> = ({ message }) => {
             <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
               {message.text}
             </p>
+          )}
+          {/* Copy Icon for Bot Messages */}
+          {isBot && message.text && (
+            <button
+              onClick={handleCopy}
+              className="flex items-center space-x-1 mt-2 text-xs text-muted-foreground hover:text-primary focus:outline-none"
+              style={{ position: 'absolute', right: 8, bottom: -28 }}
+              title="Copy response"
+            >
+              <Copy size={16} />
+              <span>{copied ? 'Copied!' : 'Copy'}</span>
+            </button>
           )}
         </div>
         

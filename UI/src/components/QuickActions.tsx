@@ -1,31 +1,28 @@
 import React from 'react';
 
 interface QuickActionsProps {
-  onQuickAction: (action: string) => void;
+  onQuickAction: (faqQuestion: string) => void;
   disabled?: boolean;
 }
 
-const QuickActions: React.FC<QuickActionsProps> = ({ onQuickAction, disabled = false }) => {
-  const quickActions = [
-    "INSAT-3DR features",
-    "Weather monitoring",
-    "Spatial resolution",
-    "Data download",
-    "Real-time imagery",
-    "Cyclone tracking"
-  ];
+const importantFAQs = [
+  "How to register on MOSDAC?",
+  "Can anonymous users (without username/password) download data?",
+  "How to download data?"
+];
 
+const QuickActions: React.FC<QuickActionsProps> = ({ onQuickAction, disabled = false }) => {
   return (
     <div className="flex flex-wrap gap-2 mb-4 animate-fade-in-up">
-      {quickActions.map((action, index) => (
+      {importantFAQs.map((question, index) => (
         <button
           key={index}
-          onClick={() => onQuickAction(action)}
+          onClick={() => onQuickAction(question)}
           disabled={disabled}
           className="quick-action disabled:opacity-50 disabled:cursor-not-allowed"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          {action}
+          {question}
         </button>
       ))}
     </div>
