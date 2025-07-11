@@ -165,7 +165,9 @@ MIT License
 ## 📢 Acknowledgements
 
 - ISRO MOSDAC: [https://mosdac.gov.in/](https://mosdac.gov.in/)
-- LangChain, HuggingFace, Neo4j, ChromaDB, Vercel, Render
+- HACK2SKILL:[https://hack2skill.com/](https://hack2skill.com/)
+- ISRO:[https://www.isro.gov.in/](https://www.isro.gov.in/)
+
 
 ---
 
