@@ -5,6 +5,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
   build:
@@ -19,7 +20,7 @@ jobs:
       
     - name: Build Docker image
       run: |
-        cd OrbitBot/Backend
+        cd Backend
         docker build -t orbitbot-backend .
         
     - name: Log in to GitHub Container Registry
@@ -33,3 +34,5 @@ jobs:
       run: |
         docker tag orbitbot-backend ghcr.io/${{ github.repository }}/orbitbot-backend:latest
         docker push ghcr.io/${{ github.repository }}/orbitbot-backend:latest
+        docker tag orbitbot-backend ghcr.io/${{ github.repository }}/orbitbot-backend:${{ github.sha }}
+        docker push ghcr.io/${{ github.repository }}/orbitbot-backend:${{ github.sha }}
