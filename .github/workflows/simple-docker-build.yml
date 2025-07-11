@@ -25,13 +25,15 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
       
-    - name: Build and push Docker image
+    - name: Build and push Docker image (Stable)
       uses: docker/build-push-action@v5
       with:
         context: ./Backend
+        file: ./Backend/Dockerfile.stable
         push: true
         tags: |
           ghcr.io/${{ github.repository }}/orbitbot-backend:latest
           ghcr.io/${{ github.repository }}/orbitbot-backend:${{ github.sha }}
         cache-from: type=gha
-        cache-to: type=gha,mode=max 
+        cache-to: type=gha,mode=max
+        platforms: linux/amd64 

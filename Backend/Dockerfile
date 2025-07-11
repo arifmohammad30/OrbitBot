@@ -28,10 +28,17 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 # Copy requirements first for better layer caching
 COPY requirements.txt ./
 
-# Install Python dependencies with retry mechanism and better error handling
-RUN pip install --no-cache-dir --timeout 600 --retries 3 -r requirements.txt || \
-    (echo "First attempt failed, retrying with different approach..." && \
-     pip install --no-cache-dir --timeout 600 --retries 3 --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org -r requirements.txt)
+# Install Python dependencies step by step to identify problematic packages
+RUN pip install --no-cache-dir fastapi uvicorn[standard] python-dotenv requests
+
+# Install LangChain packages
+RUN pip install --no-cache-dir langchain langchain-community langchain-together
+
+# Install ChromaDB and related packages
+RUN pip install --no-cache-dir chromadb sentence-transformers
+
+# Install remaining packages
+RUN pip install --no-cache-dir nest-asyncio neo4j pydantic typing-extensions
 
 # Copy application code
 COPY main.py ./
