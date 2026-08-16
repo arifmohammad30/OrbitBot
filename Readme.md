@@ -273,7 +273,7 @@ MIT License
 
 * **Mohammad Arif**
 * **Tamma Kundana Reddy**
-* **Mandapati Lakshman Kumar**
+
 
 ---
 
