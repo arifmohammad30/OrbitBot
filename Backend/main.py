@@ -17,7 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware # Essential for frontend acce
 from langchain_community.vectorstores import Chroma
 from langchain_community.graphs import Neo4jGraph
 from langchain_together import ChatTogether
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceInferenceAPIEmbeddings
 
